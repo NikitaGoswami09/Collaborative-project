@@ -3,13 +3,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 100vw; */
   padding: 0px 50px 0px;
   background-color: #333;
   overflow: hidden;
   position: sticky;
   z-index: 9;
   top: 0;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+  background-color: rgba(56, 56, 56, 1);
+}
+.transparentNav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(56, 56, 56, 0.2);
 }
 body {
   font-family: Arial, sans-serif;
@@ -19,7 +25,7 @@ body {
 #logo {
   font-family: "Holtwood One SC", serif;
   color: #fff;
-  /* font-family: 'Rammetto One', sans-serif; */
+  font-family: 'Rammetto One', sans-serif;
 }
 #user {
   color: #fff;
@@ -27,6 +33,7 @@ body {
 
 nav a {
   float: inline-start;
+  position: relative;
 
   justify-content: center;
   display: flex;
@@ -34,11 +41,10 @@ nav a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
   color: tomato;
-  background-color: #333;
   transition: color 0.3s;
-  text-decoration: underline;
 }

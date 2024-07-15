@@ -7,7 +7,7 @@ function Navbar() {
   <a href="#logo">TreasureHealth</a>
   </div>
   <div>
-  <a href="#Home">Home</a>
+  <a href="#banner">Home</a>
   <a href="#Products&services">Products & Services</a>
   <a href="#Events">Events</a>
   <a href="#ContactUs">ContactUs</a>
@@ -18,7 +18,6 @@ function Navbar() {
   <i class="fa-solid fa-user"></i>
   </div>
 `
-  NavbarContainer.style.border = "1px solid black";
   return NavbarContainer;
 }
 

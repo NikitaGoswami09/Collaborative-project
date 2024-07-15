@@ -1,10 +1,11 @@
+// import {banner} from './resource/banner.png'
+// console.log(banner);
 function Banner() {
   let bannerData;
   async function getData() {
     let res = await fetch("http://localhost:3000/banner");
     let res2 = await res.json();
     bannerData = res2[0];
-    console.log(bannerData.imgSrc);
     renderBanner(bannerData.imgSrc, bannerData.heading);
   }
   getData();
@@ -13,7 +14,7 @@ function Banner() {
 
   function renderBanner(imgSrc, heading) {
     BannerContainer.innerHTML = `
-      <div class="bannerImgContainer">
+      <div class="bannerImgContainer" id="banner">
         <img src="${imgSrc}" />
       </div>
       <div class="banner1Text">

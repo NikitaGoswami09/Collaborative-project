@@ -14,12 +14,11 @@ function Slider(URL) {
   function renderSlider(yogaPics) {
     // console.log("from the function", yogaPics);
     sliderContainer.innerHTML = `
-  <p>Slider Title</p>
+  <p>${URL.toUpperCase()}</p>
   <div class='cardContainer ${URL}'>
   
     ${yogaPics
       .map((card) => {
-        console.log(card.imgSrc);
         return Card(card.imgSrc, card.title).outerHTML;
       })
       .join("")}
